@@ -31,6 +31,7 @@ hs_err_pid*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/
 
 # Generated files
 .idea/**/contentModel.xml
@@ -76,6 +77,7 @@ HackMe.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+
 
 # JIRA plugin
 atlassian-ide-plugin.xml
