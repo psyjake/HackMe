@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<SNAPSHOT profile="SQA Group Project Metrics" timestamp="Wed, 27 Nov 2019 19:24:28 GMT" version="1.8">
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.CyclomaticComplexityMetric">
+    <VALUE measured="hackme.Main.main(String[])" value="1.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.NestingDepthMetric">
+    <VALUE measured="hackme.Main.main(String[])" value="0.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.CommentRatioClassMetric">
+    <VALUE measured="hackme.Controller" value="0.0"/>
+    <VALUE measured="hackme.Main" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.DepthOfInheritanceMetric">
+    <VALUE measured="hackme.Controller" value="1.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LinesOfCodeClassMetric">
+    <VALUE measured="hackme.Controller" value="2.0"/>
+    <VALUE measured="hackme.Main" value="12.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LackOfCohesionOfMethodsClassMetric">
+    <VALUE measured="hackme.Controller" value="0.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.AfferentCouplingMetric">
+    <VALUE measured="hackme" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.EfferentCouplingMetric">
+    <VALUE measured="hackme" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.InstabilityMetric">
+    <VALUE measured="hackme" value="1.0"/>
+  </METRIC>
+</SNAPSHOT>

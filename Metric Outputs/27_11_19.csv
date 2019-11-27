@@ -1,0 +1,12 @@
+SQA Group Project Metrics,Wed, 27 Nov 2019 19:24:28 GMT
+Method,NBD,v(G)
+"hackme.Main.main(String[])",0,1
+"hackme.Main.start(Stage)",0,1
+
+Class,COM_RAT,DIT,LCOM,LOC
+"hackme.Controller",0.00%,1,0,2
+"hackme.Main",0.00%,2,2,12
+
+Package,Ca,Ce,I
+"hackme",0,0,1.00
+
