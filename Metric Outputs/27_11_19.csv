@@ -1,0 +1,20 @@
+SQA Group Project Metrics,Wed, 27 Nov 2019 19:16:52 GMT
+Method,NBD,v(G)
+"hackme.Main.main(String[])",0,1
+"hackme.Main.start(Stage)",0,1
+"hackme.gamelogic.GameEngine.getWordList(int)",0,1
+"hackme.gamelogic.GameEngineTest.setUp()",0,1
+"hackme.gamelogic.GameEngineTest.tearDown()",0,1
+"hackme.gamelogic.GameEngineTest.testNumberOfWords()",0,1
+"hackme.gamelogic.GameEngineTest.testSizeOfWords()",2,3
+
+Class,COM_RAT,DIT,LCOM,LOC
+"hackme.Controller",0.00%,1,0,2
+"hackme.Main",0.00%,2,2,12
+"hackme.gamelogic.GameEngine",50.00%,1,1,10
+"hackme.gamelogic.GameEngineTest",0.00%,1,1,32
+
+Package,Ca,Ce,I
+"hackme",0,0,1.00
+"hackme.gamelogic",1,1,0.50
+
