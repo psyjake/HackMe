@@ -57,4 +57,11 @@ class GameEngineTest {
             }
         } while (itrWords.hasNext());
     }
+
+    @org.junit.jupiter.api.Test
+    void testGetPassword() {
+        List<String> words = gameEngine.getWordList(gameDifficulty);
+        String sPassword = gameEngine.getPassword(words);
+        assertEquals(true, words.contains(sPassword));
+    }
 }

@@ -4,10 +4,7 @@ import java.io.*;
 import java.net.URL;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class GameEngine {
 
@@ -22,19 +19,19 @@ public class GameEngine {
      * @return a list of randomly selected words of the correct length
      */
     public List<String> getWordList(Difficulty difficulty) {
-        Scanner wordScanner = getWordFileScanner(difficulty);
-        ArrayList<String> allWords = new ArrayList<>();//A list to contain all words from file.
-        while (wordScanner.hasNextLine()) {
-            allWords.add(wordScanner.nextLine());
+        Scanner scnWords = getWordFileScanner(difficulty);
+        ArrayList<String> arrLstAllWords = new ArrayList<>();//A list to contain all words from file.
+        while (scnWords.hasNextLine()) {
+            arrLstAllWords.add(scnWords.nextLine());
         }
-        Collections.shuffle(allWords);//Randomise the order of the list.
-        ArrayList<String> wordList = new ArrayList<>();
+        Collections.shuffle(arrLstAllWords);//Randomise the order of the list.
+        ArrayList<String> lstWords = new ArrayList<>();
 
         //Add the first ten elements to the final list.
         for (int i = 0; i < 10; i++) {
-            wordList.add(allWords.get(i));
+            lstWords.add(arrLstAllWords.get(i));
         }
-        return wordList;
+        return lstWords;
     }
 
     /**
@@ -64,5 +61,21 @@ public class GameEngine {
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Invalid File URI", e);
         }
+    }
+
+    /**
+     *
+     * @param words the list of words that will be displayed on the screen
+     * @return the word chosen as the password
+     */
+    public String getPassword(List<String> words) {
+        Iterator<String> itrWords = words.iterator();
+        int iIndex = new Random().nextInt(words.size());
+
+        //Iterate through the words for 'iIndex' times
+        for(int i = 0; i<iIndex; i++) {
+            itrWords.next();
+        }
+        return itrWords.next();
     }
 }
