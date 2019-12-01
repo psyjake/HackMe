@@ -43,6 +43,23 @@ class GameEngineTest {
         }
         assertEquals(numberOfWords, words.size());
 
+        words = gameEngine.getWordList(GameEngine.Difficulty.MODERATE);
+        for (String word : words) {
+            System.out.println(word);
+        }
+        assertEquals(numberOfWords, words.size());
+
+        words = gameEngine.getWordList(GameEngine.Difficulty.EASY);
+        for (String word : words) {
+            System.out.println(word);
+        }
+        assertEquals(numberOfWords, words.size());
+
+        words = gameEngine.getWordList(null);
+        for (String word : words) {
+            System.out.println(word);
+        }
+        assertEquals(numberOfWords, words.size());
 
     }
 
@@ -63,5 +80,16 @@ class GameEngineTest {
         List<String> words = gameEngine.getWordList(gameDifficulty);
         String sPassword = gameEngine.getPassword(words);
         assertEquals(true, words.contains(sPassword));
+    }
+
+    @org.junit.jupiter.api.Test
+    void testMatchPassword() {
+
+        List<String> words = gameEngine.getWordList(gameDifficulty);
+        String sPassword = gameEngine.getPassword(words);
+
+        assertEquals(true, gameEngine.matchPassword(sPassword, sPassword));
+        assertNotEquals(true, gameEngine.matchPassword(null, sPassword));
+        assertNotEquals(true, gameEngine.matchPassword("", sPassword));
     }
 }
