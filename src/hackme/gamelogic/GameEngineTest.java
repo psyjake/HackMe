@@ -1,5 +1,7 @@
 package hackme.gamelogic;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -91,5 +93,12 @@ class GameEngineTest {
         assertEquals(true, gameEngine.matchPassword(sPassword, sPassword));
         assertNotEquals(true, gameEngine.matchPassword(null, sPassword));
         assertNotEquals(true, gameEngine.matchPassword("", sPassword));
+    }
+
+    @org.junit.jupiter.api.Test
+    void testCorrectChars(){
+        assertEquals(2, gameEngine.correctCharacters("dog", "log"));
+        assertEquals(0, gameEngine.correctCharacters("xrt", "log"));
+
     }
 }

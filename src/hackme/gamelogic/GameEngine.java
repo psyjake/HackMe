@@ -12,6 +12,18 @@ public class GameEngine {
         EASY, MODERATE, HARD
     }
 
+    String password;
+    List<String> wordList;
+
+    /**
+     * Called when starting the game. Sets initial values etc.
+     * @param difficulty The chosen difficulty for the game.
+     */
+    public void setupGame(Difficulty difficulty) {
+        wordList = getWordList(difficulty);
+        password = getPassword(wordList);
+    }
+
     /**
      * Returns a random list of words from the wordbank.
      *
@@ -87,5 +99,27 @@ public class GameEngine {
      */
     public boolean matchPassword(String pickedWord, String password) {
         return pickedWord == password;
+    }
+
+    /**
+     * Counts the number of characters that are in the same position in the two words.
+     * @param pickedWord what the user entered
+     * @param password the correct password
+     * @return number of equal characters between words
+     */
+    public int correctCharacters(String pickedWord, String password) {
+        int correct = 0;
+
+        if(pickedWord.length() != password.length())
+            return 0;
+
+        for(int i = 0; i < pickedWord.length(); i++) {
+            char pickedCharacter = pickedWord.charAt(i);
+            char passwordCharacter = password.charAt(i);
+            if(pickedCharacter == passwordCharacter){
+                correct += 1;
+            }
+        }
+        return correct;
     }
 }
