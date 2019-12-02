@@ -42,7 +42,7 @@ public class GameEngine {
      */
     private Scanner getWordFileScanner(Difficulty difficulty) {
         File wordFile;
-        String path = System.getProperty("user.dir") + "\\src\\hackme\\resources\\";
+        String path = System.getProperty("user.dir") + "/src/hackme/resources/";
         switch ((difficulty != null) ? difficulty : difficulty.EASY) {
             case MODERATE:
                 path += "ModerateWords.txt";
