@@ -1,5 +1,13 @@
 package hackme.gamelogic;
 
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+
+import javax.swing.*;
 import java.io.*;
 import java.net.URL;
 import java.nio.file.FileSystems;
@@ -41,7 +49,7 @@ public class GameEngine {
      * @return Scanner object that can be used to iterate over the right file
      */
     private Scanner getWordFileScanner(Difficulty difficulty) {
-        File wordFile;
+        File fWords;
         String path = System.getProperty("user.dir") + "\\src\\hackme\\resources\\";
         switch ((difficulty != null) ? difficulty : difficulty.EASY) {
             case MODERATE:
@@ -55,9 +63,9 @@ public class GameEngine {
                 break;
         }
         System.out.println(path);
-        wordFile = new File(path);
+        fWords = new File(path);
         try {
-            return new Scanner(wordFile);
+            return new Scanner(fWords);
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Invalid File URI", e);
         }
@@ -65,12 +73,12 @@ public class GameEngine {
 
     /**
      *
-     * @param words the list of words that will be displayed on the screen
+     * @param lstWords the list of words that will be displayed on the screen
      * @return the word chosen as the password
      */
-    public String getPassword(List<String> words) {
-        Iterator<String> itrWords = words.iterator();
-        int iIndex = new Random().nextInt(words.size());
+    public String getPassword(List<String> lstWords) {
+        Iterator<String> itrWords = lstWords.iterator();
+        int iIndex = new Random().nextInt(lstWords.size());
 
         //Iterate through the words for 'iIndex' times
         for(int i = 0; i<iIndex; i++) {
@@ -81,11 +89,31 @@ public class GameEngine {
 
     /**
      *
-     * @param pickedWord the word a user selected
-     * @param password the password chosen by the system
+     * @param strPickedWord the word a user selected
+     * @param strPassword the password chosen by the system
      * @return true or false depending if the strings match or not
      */
-    public boolean matchPassword(String pickedWord, String password) {
-        return pickedWord == password;
+    public boolean matchPassword(String strPickedWord, String strPassword) {
+        return strPickedWord == strPassword;
+    }
+
+    /**
+     * Create a list of buttons that will display the text of the words
+     * @param lstWords the list of words to display on the screen
+     * @return the buttons for the list of words
+     */
+    public ArrayList<Button> createDisplayableWords(List<String> lstWords, EventHandler<ActionEvent> actionEvent)
+    {
+        ArrayList<Button> arrLstWordButtons = new ArrayList<>();
+       Iterator<String> itrWords = lstWords.iterator();
+
+       while(itrWords.hasNext()) {
+           Button b = new Button();
+           b.setOnAction(actionEvent);
+           b.setText(itrWords.next());
+           arrLstWordButtons.add(b);
+       }
+
+       return arrLstWordButtons;
     }
 }
