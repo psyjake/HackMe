@@ -15,8 +15,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-       <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" text="Start" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#startGameScene"/>
        <Text  fx:id="label1" text="Button not clicked" onMouseClicked="#launchGameScene"/>
    </children>
 </GridPane>

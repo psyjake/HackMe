@@ -15,7 +15,7 @@ import java.util.List;
 public class GameController {
 
     private Stage stage;
-    private GameEngine gameEngine;
+    private GameEngine.GameEngine gameEngine;
     private List<String> lstWords;
     private String strPassword;
     private int iNumOfLives;
@@ -23,14 +23,18 @@ public class GameController {
 
     @FXML
     private Text txtCorrectCharsAmount;
+    private Difficulty difficulty;
+
     /**
-     *
+     * Set up the game
      */
     public GameController()
     {
-        System.out.println("game engine created");
+        System.out.println("game controller constructor");
         gameEngine = new GameEngine();
         iNumOfLives = 4;
+
+        //display
     }
 
     /**
@@ -42,7 +46,7 @@ public class GameController {
     }
 
     /**
-     * initialise the start scene
+     * start the end scene
      */
     public void startEndGameScene()
     {
@@ -57,15 +61,6 @@ public class GameController {
             e.printStackTrace();
         }
         stage.setScene(new Scene(root));
-    }
-
-    /**
-     *
-     */
-    @FXML
-    public void setWordsList (List lstWords) {
-        this.lstWords = lstWords;
-        this.strPassword = this.gameEngine.getPassword(lstWords);
     }
 
     /**
@@ -90,5 +85,15 @@ public class GameController {
             int iNumOfCorrectChars = gameEngine.correctCharacters(text.getText(), strPassword);
             txtCorrectCharsAmount.setText(Integer.toString(iNumOfCorrectChars));
         }
+    }
+
+    /**
+     * set the difficulty & create the list of words and password
+     * @param difficulty the difficulty of the game
+     */
+    public void initialiseGameWordVariables(GameEngine.Difficulty difficulty) {
+        this.difficulty = difficulty;
+        lstWords = gameEngine.getWordList(difficulty);
+        strPassword = gameEngine.getPassword(lstWords);
     }
 }
