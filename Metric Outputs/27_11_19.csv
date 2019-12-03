@@ -4,7 +4,7 @@ Method,NBD,v(G)
 "hackme.Main.start(Stage)",0,1
 
 Class,COM_RAT,DIT,LCOM,LOC
-"hackme.Controller",0.00%,1,0,2
+"hackme.StartController",0.00%,1,0,2
 "hackme.Main",0.00%,2,2,12
 
 Package,Ca,Ce,I

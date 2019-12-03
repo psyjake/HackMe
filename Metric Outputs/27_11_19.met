@@ -9,19 +9,19 @@
     <VALUE measured="hackme.Main.start(Stage)" value="0.0"/>
   </METRIC>
   <METRIC class_name="com.sixrr.stockmetrics.classMetrics.CommentRatioClassMetric">
-    <VALUE measured="hackme.Controller" value="0.0"/>
+    <VALUE measured="hackme.StartController" value="0.0"/>
     <VALUE measured="hackme.Main" value="0.0"/>
   </METRIC>
   <METRIC class_name="com.sixrr.stockmetrics.classMetrics.DepthOfInheritanceMetric">
-    <VALUE measured="hackme.Controller" value="1.0"/>
+    <VALUE measured="hackme.StartController" value="1.0"/>
     <VALUE measured="hackme.Main" value="2.0"/>
   </METRIC>
   <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LinesOfCodeClassMetric">
-    <VALUE measured="hackme.Controller" value="2.0"/>
+    <VALUE measured="hackme.StartController" value="2.0"/>
     <VALUE measured="hackme.Main" value="12.0"/>
   </METRIC>
   <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LackOfCohesionOfMethodsClassMetric">
-    <VALUE measured="hackme.Controller" value="0.0"/>
+    <VALUE measured="hackme.StartController" value="0.0"/>
     <VALUE measured="hackme.Main" value="2.0"/>
   </METRIC>
   <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.AfferentCouplingMetric">
