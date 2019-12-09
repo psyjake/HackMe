@@ -24,6 +24,9 @@ public class GameScreenController implements Initializable {
     private int iScore;
 
     @FXML
+    private Label attemptsLabel;
+
+    @FXML
     private ListView<String> listViewWords;
 
     @FXML
@@ -67,19 +70,24 @@ public class GameScreenController implements Initializable {
      * @param word the selected word
      */
     public void wordOnClick(String word) {
+        System.out.println("Password: " + strPassword);
         if(word.equals(strPassword)) {
-            //go to end game
+            feedbackLabel.setText("GAME WON");
             System.out.println("GAME WON");
         } else {
             iScore -= 500;
             if(--iNumOfLives < 1) {
-                //you lose, end game
+                feedbackLabel.setText("GAME LOST");
                 System.out.println("GAME LOST");
                 return;
             }
             int iNumOfCorrectChars = gameEngine.correctCharacters(word, strPassword);
             System.out.println("NUMBER OF CORRECT CHARACTERS: " + iNumOfCorrectChars);
-            feedbackLabel.setText(Integer.toString(iNumOfCorrectChars));
+            String strFeedback = feedbackLabel.getText() + "\n" + word + ": " + iNumOfCorrectChars;
+            feedbackLabel.setText(strFeedback);
+
+            String strAttempts = "Remaining attempts = " + iNumOfLives;
+            attemptsLabel.setText(strAttempts);
         }
     }
 }
