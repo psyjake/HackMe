@@ -1,6 +1,7 @@
 package hackme.screens;
 
 import hackme.gamelogic.GameEngine;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -36,7 +37,14 @@ public class GameScreenController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        System.out.println("GameScreenController initialize");
+        listViewWords.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
+            @Override
+            public void handle(javafx.scene.input.MouseEvent mouseEvent) {
+                String selectedWord = listViewWords.getSelectionModel().getSelectedItem();
+                wordOnClick(selectedWord);
+            }
+        });
     }
 
     /**
@@ -61,23 +69,22 @@ public class GameScreenController implements Initializable {
 
     /**
      * Handle the action of clicking on a word
-     * @param mouseEvent The event caused by clicking on a Text object
+     *
      */
-    @FXML
-    public void wordOnClick(MouseEvent mouseEvent) {
-        Text text = (Text) mouseEvent.getSource();
-
-        if(text.getText().equals(strPassword)) {
+    public void wordOnClick(String word) {
+        if(word.equals(strPassword)) {
             //go to end game
+            System.out.println("GAME WON");
         } else {
             iScore -= 500;
             if(--iNumOfLives < 1) {
-
                 //you lose, end game
+                System.out.println("GAME LOST");
                 return;
             }
-            int iNumOfCorrectChars = gameEngine.correctCharacters(text.getText(), strPassword);
-            txtCorrectCharsAmount.setText(Integer.toString(iNumOfCorrectChars));
+            int iNumOfCorrectChars = gameEngine.correctCharacters(word, strPassword);
+            System.out.println("NUMBER OF CORRECT CHARACTERS: " + iNumOfCorrectChars);
+            //txtCorrectCharsAmount.setText(Integer.toString(iNumOfCorrectChars));
         }
     }
 }

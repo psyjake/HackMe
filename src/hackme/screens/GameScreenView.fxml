@@ -7,6 +7,5 @@
    <children>
       <ListView fx:id="listViewWords" layoutX="53.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="272.0" layoutY="253.0" text="Label" />
-      <TextField layoutX="53.0" layoutY="249.0" />
    </children>
 </AnchorPane>
