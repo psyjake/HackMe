@@ -1,0 +1,3 @@
+// this file contains serveral errors encountered during the game production.
+
+when the game is run, the the number of attempts is shown, when the wrong answer is clicked, rather than the reduced number of attempts to be shown alone, the new number of attempts is shown next the the old number of attempts.
