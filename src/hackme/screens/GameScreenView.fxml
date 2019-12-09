@@ -6,6 +6,6 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(30, 30, 30);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackme.screens.GameScreenController">
    <children>
       <ListView fx:id="listViewWords" layoutX="53.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="272.0" layoutY="253.0" text="Label" />
+      <Label fx:id="feedbackLabel" layoutX="272.0" layoutY="253.0" text="Label" />
    </children>
 </AnchorPane>

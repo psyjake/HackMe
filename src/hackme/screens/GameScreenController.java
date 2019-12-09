@@ -4,10 +4,10 @@ import hackme.gamelogic.GameEngine;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.text.Text;
 
-import java.awt.event.MouseEvent;
+import java.awt.*;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -27,7 +27,7 @@ public class GameScreenController implements Initializable {
     private ListView<String> listViewWords;
 
     @FXML
-    private Text txtCorrectCharsAmount; // The text that displays on the screen the number of characters in the correct place
+    private Label feedbackLabel;
 
 
     /**
@@ -60,16 +60,11 @@ public class GameScreenController implements Initializable {
         strPassword = gameEngine.getPassword(lstWords);
 
         listViewWords.getItems().addAll(lstWords);
-
-    }
-
-    private void listWords() {
-//        for (String s: gameEngine.wordList)
     }
 
     /**
      * Handle the action of clicking on a word
-     *
+     * @param word the selected word
      */
     public void wordOnClick(String word) {
         if(word.equals(strPassword)) {
@@ -84,7 +79,7 @@ public class GameScreenController implements Initializable {
             }
             int iNumOfCorrectChars = gameEngine.correctCharacters(word, strPassword);
             System.out.println("NUMBER OF CORRECT CHARACTERS: " + iNumOfCorrectChars);
-            //txtCorrectCharsAmount.setText(Integer.toString(iNumOfCorrectChars));
+            feedbackLabel.setText(Integer.toString(iNumOfCorrectChars));
         }
     }
 }
