@@ -11,8 +11,8 @@
             <Font name="Droid Sans Mono" size="13.0" />
          </font>
       </Label>
-      <ListView fx:id="listViewWords" layoutX="53.0" layoutY="38.0" prefHeight="200.0" prefWidth="285.0" />
-      <Label fx:id="feedbackLabel" layoutX="53.0" layoutY="259.0" text="Number of matching characters = " textFill="#05b911">
+      <ListView fx:id="listViewWords" layoutX="53.0" layoutY="38.0" prefHeight="246.0" prefWidth="285.0" />
+      <Label fx:id="feedbackLabel" layoutX="53.0" layoutY="332.0" text="Number of matching characters = " textFill="#05b911">
          <font>
             <Font name="Droid Sans Mono" size="13.0" />
          </font></Label>
