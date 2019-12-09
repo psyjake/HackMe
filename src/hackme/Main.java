@@ -61,11 +61,12 @@ public class Main extends Application {
             };
 
             // Initialise game screen with selected difficulty
-            GameEngine.Difficulty difficulty = GameEngine.Difficulty.EASY;
+            GameEngine.Difficulty difficulty = GameEngine.Difficulty.HARD;
+            System.out.println("message: "+message );
             switch (message) {
-                case "startEasy": difficulty = GameEngine.Difficulty.EASY; break;
-                case "startMedium": difficulty = GameEngine.Difficulty.MODERATE; break;
-                case "startHard": difficulty = GameEngine.Difficulty.HARD; break;
+                case "easyStart": difficulty = GameEngine.Difficulty.EASY; break;
+                case "mediumStart": difficulty = GameEngine.Difficulty.MODERATE; break;
+                case "hardStart": difficulty = GameEngine.Difficulty.HARD; break;
             }
 
             ((GameScreenController)loader.getController()).initialiseGame(difficulty);

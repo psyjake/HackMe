@@ -3,6 +3,7 @@ package hackme.screens;
 import hackme.gamelogic.GameEngine;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.text.Text;
 
 import java.awt.event.MouseEvent;
@@ -20,6 +21,9 @@ public class GameScreenController implements Initializable {
     private List<String> lstWords;
     private String strPassword;
     private int iScore;
+
+    @FXML
+    private ListView<String> listViewWords;
 
     @FXML
     private Text txtCorrectCharsAmount; // The text that displays on the screen the number of characters in the correct place
@@ -46,6 +50,9 @@ public class GameScreenController implements Initializable {
         this.difficulty = difficulty;
         lstWords = gameEngine.getWordList(difficulty);
         strPassword = gameEngine.getPassword(lstWords);
+
+        listViewWords.getItems().addAll(lstWords);
+
     }
 
     private void listWords() {
