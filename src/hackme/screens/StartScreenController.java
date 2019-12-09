@@ -20,12 +20,30 @@ public class StartScreenController implements Initializable {
     }
 
     /**
-     * Handle the exit button on click
+     * Handle the easy level start button on click
      * @param actionEvent The button click
      * @throws Exception
      */
-    public void startButtonClicked(ActionEvent actionEvent) throws Exception {
-        returner.onScreenReturn("start");
+    public void easyLevelButtonClicked(ActionEvent actionEvent) throws Exception {
+        returner.onScreenReturn("easyStart");
+    }
+
+    /**
+     * Handle the medium level start button on click
+     * @param actionEvent The button click
+     * @throws Exception
+     */
+    public void mediumLevelButtonClicked(ActionEvent actionEvent) throws Exception {
+        returner.onScreenReturn("mediumStart");
+    }
+
+    /**
+     * Handle the hard level start button on click
+     * @param actionEvent The button click
+     * @throws Exception
+     */
+    public void hardLevelButtonClicked(ActionEvent actionEvent) throws Exception {
+        returner.onScreenReturn("hardStart");
     }
 
     /**

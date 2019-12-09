@@ -1,5 +1,6 @@
 package hackme;
 
+import hackme.gamelogic.GameEngine;
 import hackme.screens.GameScreenController;
 import hackme.screens.ScreenReturner;
 import hackme.screens.StartScreenController;
@@ -21,7 +22,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
-        window.setTitle("HackMe");
+        window.setTitle("HackMe Game");
 
         // Display the start screen
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader()
@@ -41,12 +42,12 @@ public class Main extends Application {
     }
 
     /**
-     *
-     * @param message
+     * Handles the start screen returning control back
+     * @param message A message passed by the caller
      * @throws Exception
      */
     private void startScreenReturn(String message) throws Exception {
-        if (message.equals("start")) {
+        if (message.contains("Start")) {
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader()
                     .getResource("hackme/screens/GameScreenView.fxml"));
             Parent root = loader.load();
@@ -59,13 +60,22 @@ public class Main extends Application {
                 }
             };
 
+            // Initialise game screen with selected difficulty
+            GameEngine.Difficulty difficulty = GameEngine.Difficulty.EASY;
+            switch (message) {
+                case "startEasy": difficulty = GameEngine.Difficulty.EASY; break;
+                case "startMedium": difficulty = GameEngine.Difficulty.MODERATE; break;
+                case "startHard": difficulty = GameEngine.Difficulty.HARD; break;
+            }
+
+            ((GameScreenController)loader.getController()).initialiseGame(difficulty);
             window.setScene(new Scene(root, 1225, 710));
         } else if (message.equals("exit")) Platform.exit();
     }
 
     /**
-     *
-     * @param message
+     * Handles the game screen returning control back
+     * @param message A message passed by the caller
      * @throws Exception
      */
     private void gameScreenReturn(String message) throws Exception {
@@ -85,8 +95,8 @@ public class Main extends Application {
     }
 
     /**
-     *
-     * @param message
+     * Handles the end screen returning control back
+     * @param message A message passed by the caller
      * @throws Exception
      */
     private void endScreenReturn(String message) throws Exception {

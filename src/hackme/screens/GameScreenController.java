@@ -11,14 +11,16 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class GameScreenController implements Initializable {
-    public ScreenReturner returner = null;
+    public ScreenReturner returner;
 
     private GameEngine gameEngine;
+    private int iNumOfLives;
+    private GameEngine.Difficulty difficulty;
+
     private List<String> lstWords;
     private String strPassword;
-    private int iNumOfLives;
     private int iScore;
-    private GameEngine.Difficulty difficulty;
+
     @FXML
     private Text txtCorrectCharsAmount; // The text that displays on the screen the number of characters in the correct place
 
@@ -32,14 +34,22 @@ public class GameScreenController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
     /**
-     * Set up the game
+     * Configure the game engine and start a new game
+     * @param difficulty the difficulty of the game
      */
-    public GameScreenController()
-    {
-        System.out.println("game controller constructor");
+    public void initialiseGame(GameEngine.Difficulty difficulty) {
         gameEngine = new GameEngine();
         iNumOfLives = 4;
+
+        this.difficulty = difficulty;
+        lstWords = gameEngine.getWordList(difficulty);
+        strPassword = gameEngine.getPassword(lstWords);
+    }
+
+    private void listWords() {
+//        for (String s: gameEngine.wordList)
     }
 
     /**
@@ -62,15 +72,5 @@ public class GameScreenController implements Initializable {
             int iNumOfCorrectChars = gameEngine.correctCharacters(text.getText(), strPassword);
             txtCorrectCharsAmount.setText(Integer.toString(iNumOfCorrectChars));
         }
-    }
-
-    /**
-     * set the difficulty & create the list of words and password
-     * @param difficulty the difficulty of the game
-     */
-    public void initialiseGameWordVariables(GameEngine.Difficulty difficulty) {
-        this.difficulty = difficulty;
-        lstWords = gameEngine.getWordList(difficulty);
-        strPassword = gameEngine.getPassword(lstWords);
     }
 }
