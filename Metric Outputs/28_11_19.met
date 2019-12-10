@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<SNAPSHOT profile="SQA Group Project Metrics" timestamp="Thu, 28 Nov 2019 17:58:44 GMT" version="1.8">
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.CyclomaticComplexityMetric">
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordFileScanner(Difficulty)" value="5.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testNumberOfWords()" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testSizeOfWords()" value="3.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.Main.main(String[])" value="1.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.setUp()" value="4.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordList(Difficulty)" value="3.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.NestingDepthMetric">
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordFileScanner(Difficulty)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testNumberOfWords()" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testSizeOfWords()" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.Main.main(String[])" value="0.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordList(Difficulty)" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.CommentRatioClassMetric">
+    <VALUE measured="hackme.Controller" value="0.0"/>
+    <VALUE measured="hackme.Main" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.Difficulty" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="0.044444444444444446"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="0.32"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.DepthOfInheritanceMetric">
+    <VALUE measured="hackme.Controller" value="1.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LinesOfCodeClassMetric">
+    <VALUE measured="hackme.Controller" value="2.0"/>
+    <VALUE measured="hackme.Main" value="12.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.Difficulty" value="3.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="45.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="50.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LackOfCohesionOfMethodsClassMetric">
+    <VALUE measured="hackme.Controller" value="0.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.Difficulty" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.AfferentCouplingMetric">
+    <VALUE measured="hackme" value="0.0"/>
+    <VALUE measured="hackme.gamelogic" value="2.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.EfferentCouplingMetric">
+    <VALUE measured="hackme" value="0.0"/>
+    <VALUE measured="hackme.gamelogic" value="2.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.InstabilityMetric">
+    <VALUE measured="hackme" value="1.0"/>
+    <VALUE measured="hackme.gamelogic" value="0.6666666666666666"/>
+  </METRIC>
+</SNAPSHOT>

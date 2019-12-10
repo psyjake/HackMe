@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(30, 30, 30);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackme.screens.GameScreenController">
+   <children>
+      <Label fx:id="attemptsLabel" layoutX="53.0" layoutY="14.0" text="Remaining Attempts = 4" textFill="#05b911">
+         <font>
+            <Font name="Droid Sans Mono" size="13.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listViewWords" layoutX="53.0" layoutY="38.0" prefHeight="246.0" prefWidth="285.0" />
+      <Label fx:id="feedbackLabel" layoutX="53.0" layoutY="332.0" text="Number of matching characters = " textFill="#05b911">
+         <font>
+            <Font name="Droid Sans Mono" size="13.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

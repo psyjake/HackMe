@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="710" prefWidth="1225" style="-fx-background-color: rgb(30, 30, 30);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackme.screens.StartScreenController">
+   <children>
+      <Label layoutX="448.0" layoutY="155.0" style="-fx-text-fill: #2effa7; -fx-font-family: Consolas; -fx-font-size: 100" text="HackMe" />
+
+      <Button fx:id="easyLevelButton" layoutX="476.0" layoutY="317.0" mnemonicParsing="false" onAction="#easyLevelButtonClicked" style="-fx-font-family: Consolas; -fx-font-size: 40" text="Easy Level" />
+      <Button fx:id="mediumLevelButton" layoutX="454.0" layoutY="407.0" mnemonicParsing="false" onAction="#mediumLevelButtonClicked" style="-fx-font-family: Consolas; -fx-font-size: 40" text="Medium Level" />
+      <Button fx:id="hardLevelButton" layoutX="476.0" layoutY="496.0" mnemonicParsing="false" onAction="#hardLevelButtonClicked" style="-fx-font-family: Consolas; -fx-font-size: 40" text="Hard Level" />
+
+      <Button fx:id="exitButton" layoutX="14.0" layoutY="641.0" mnemonicParsing="false" onAction="#exitButtonClicked" style="-fx-font-family: Consolas; -fx-font-size: 30" text="Exit" />
+   </children>
+</AnchorPane>

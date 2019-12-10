@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<SNAPSHOT profile="SQA" timestamp="Tue, 3 Dec 2019 13:34:38 GMT" version="1.8">
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.CyclomaticComplexityMetric">
+    <VALUE measured="hackme.MainTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.EndController.onKeyPressed(KeyEvent)" value="3.0"/>
+    <VALUE measured="hackme.StartController.getScoreboard()" value="3.0"/>
+    <VALUE measured="hackme.MainTest.testStart()" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest.testWordOnClick()" value="1.0"/>
+    <VALUE measured="hackme.EndController.restartOnClick()" value="1.0"/>
+    <VALUE measured="hackme.StartControllerTest.testSetDifficulty()" value="1.0"/>
+    <VALUE measured="hackme.StartControllerTest.testSetStage()" value="1.0"/>
+    <VALUE measured="hackme.GameController.GameController()" value="1.0"/>
+    <VALUE measured="hackme.StartController.StartController()" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest.testInitialiseGameWordVariables()" value="1.0"/>
+    <VALUE measured="hackme.GameController.wordOnClick(MouseEvent)" value="3.0"/>
+    <VALUE measured="hackme.EndControllerTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="1.0"/>
+    <VALUE measured="hackme.GameController.initialiseGameWordVariables(Difficulty)" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest.testSetStage()" value="1.0"/>
+    <VALUE measured="hackme.GameController.setStage(Stage)" value="1.0"/>
+    <VALUE measured="hackme.StartController.setDifficulty(ActionEvent)" value="3.0"/>
+    <VALUE measured="hackme.StartControllerTest.testStartGameScene()" value="1.0"/>
+    <VALUE measured="hackme.EndController.closeOnClick()" value="1.0"/>
+    <VALUE measured="hackme.StartController.startGameScene()" value="2.0"/>
+    <VALUE measured="hackme.EndControllerTest.testSetStage()" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest.testStartEndGameScene()" value="1.0"/>
+    <VALUE measured="hackme.EndController.setStage(Stage)" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest.testCloseOnClick()" value="1.0"/>
+    <VALUE measured="hackme.MainTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.StartController.setStage(Stage)" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.EndController.setFinalScore(int)" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.MainTest.testMain()" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest.testOnKeyPressed()" value="1.0"/>
+    <VALUE measured="hackme.Main.main(String[])" value="1.0"/>
+    <VALUE measured="hackme.StartControllerTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest.testSetFinalScore()" value="1.0"/>
+    <VALUE measured="hackme.StartControllerTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.EndController.EndController()" value="1.0"/>
+    <VALUE measured="hackme.GameController.startEndGameScene()" value="2.0"/>
+    <VALUE measured="hackme.EndControllerTest.testRestartOnClick()" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest.tearDown()" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.NestingDepthMetric">
+    <VALUE measured="hackme.MainTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.EndController.onKeyPressed(KeyEvent)" value="1.0"/>
+    <VALUE measured="hackme.StartController.getScoreboard()" value="1.0"/>
+    <VALUE measured="hackme.MainTest.testStart()" value="0.0"/>
+    <VALUE measured="hackme.GameControllerTest.testWordOnClick()" value="0.0"/>
+    <VALUE measured="hackme.EndController.restartOnClick()" value="0.0"/>
+    <VALUE measured="hackme.StartControllerTest.testSetDifficulty()" value="0.0"/>
+    <VALUE measured="hackme.StartControllerTest.testSetStage()" value="0.0"/>
+    <VALUE measured="hackme.GameController.GameController()" value="0.0"/>
+    <VALUE measured="hackme.StartController.StartController()" value="0.0"/>
+    <VALUE measured="hackme.GameControllerTest.testInitialiseGameWordVariables()" value="0.0"/>
+    <VALUE measured="hackme.GameController.wordOnClick(MouseEvent)" value="2.0"/>
+    <VALUE measured="hackme.EndControllerTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="0.0"/>
+    <VALUE measured="hackme.GameController.initialiseGameWordVariables(Difficulty)" value="0.0"/>
+    <VALUE measured="hackme.GameControllerTest.testSetStage()" value="0.0"/>
+    <VALUE measured="hackme.GameController.setStage(Stage)" value="0.0"/>
+    <VALUE measured="hackme.StartController.setDifficulty(ActionEvent)" value="1.0"/>
+    <VALUE measured="hackme.StartControllerTest.testStartGameScene()" value="0.0"/>
+    <VALUE measured="hackme.EndController.closeOnClick()" value="0.0"/>
+    <VALUE measured="hackme.StartController.startGameScene()" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest.testSetStage()" value="0.0"/>
+    <VALUE measured="hackme.GameControllerTest.testStartEndGameScene()" value="0.0"/>
+    <VALUE measured="hackme.EndController.setStage(Stage)" value="0.0"/>
+    <VALUE measured="hackme.EndControllerTest.testCloseOnClick()" value="0.0"/>
+    <VALUE measured="hackme.MainTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.StartController.setStage(Stage)" value="0.0"/>
+    <VALUE measured="hackme.GameControllerTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.EndController.setFinalScore(int)" value="0.0"/>
+    <VALUE measured="hackme.EndControllerTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.MainTest.testMain()" value="0.0"/>
+    <VALUE measured="hackme.EndControllerTest.testOnKeyPressed()" value="0.0"/>
+    <VALUE measured="hackme.Main.main(String[])" value="0.0"/>
+    <VALUE measured="hackme.StartControllerTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.EndControllerTest.testSetFinalScore()" value="0.0"/>
+    <VALUE measured="hackme.StartControllerTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.EndController.EndController()" value="0.0"/>
+    <VALUE measured="hackme.GameController.startEndGameScene()" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest.testRestartOnClick()" value="0.0"/>
+    <VALUE measured="hackme.GameControllerTest.tearDown()" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.CommentRatioClassMetric">
+    <VALUE measured="hackme.StartControllerTest" value="0.0"/>
+    <VALUE measured="hackme.EndController" value="0.30952380952380953"/>
+    <VALUE measured="hackme.StartController" value="0.25333333333333335"/>
+    <VALUE measured="hackme.GameControllerTest" value="0.0"/>
+    <VALUE measured="hackme.Main" value="0.0"/>
+    <VALUE measured="hackme.GameController" value="0.26666666666666666"/>
+    <VALUE measured="hackme.MainTest" value="0.0"/>
+    <VALUE measured="hackme.EndControllerTest" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.DepthOfInheritanceMetric">
+    <VALUE measured="hackme.StartControllerTest" value="1.0"/>
+    <VALUE measured="hackme.EndController" value="1.0"/>
+    <VALUE measured="hackme.StartController" value="1.0"/>
+    <VALUE measured="hackme.GameControllerTest" value="1.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+    <VALUE measured="hackme.GameController" value="1.0"/>
+    <VALUE measured="hackme.MainTest" value="1.0"/>
+    <VALUE measured="hackme.EndControllerTest" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LinesOfCodeClassMetric">
+    <VALUE measured="hackme.StartControllerTest" value="17.0"/>
+    <VALUE measured="hackme.EndController" value="42.0"/>
+    <VALUE measured="hackme.StartController" value="75.0"/>
+    <VALUE measured="hackme.GameControllerTest" value="20.0"/>
+    <VALUE measured="hackme.Main" value="15.0"/>
+    <VALUE measured="hackme.GameController" value="75.0"/>
+    <VALUE measured="hackme.MainTest" value="14.0"/>
+    <VALUE measured="hackme.EndControllerTest" value="23.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LackOfCohesionOfMethodsClassMetric">
+    <VALUE measured="hackme.StartControllerTest" value="5.0"/>
+    <VALUE measured="hackme.EndController" value="5.0"/>
+    <VALUE measured="hackme.StartController" value="2.0"/>
+    <VALUE measured="hackme.GameControllerTest" value="6.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+    <VALUE measured="hackme.GameController" value="1.0"/>
+    <VALUE measured="hackme.MainTest" value="4.0"/>
+    <VALUE measured="hackme.EndControllerTest" value="7.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.AfferentCouplingMetric">
+    <VALUE measured="hackme" value="3.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.EfferentCouplingMetric">
+    <VALUE measured="hackme" value="3.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.InstabilityMetric">
+    <VALUE measured="hackme" value="0.5"/>
+  </METRIC>
+</SNAPSHOT>

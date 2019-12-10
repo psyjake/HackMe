@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<SNAPSHOT profile="Metrics" timestamp="Mon, 9 Dec 2019 22:10:21 GMT" version="1.8">
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.CyclomaticComplexityMetric">
+    <VALUE measured="hackme.screens.GameScreenControllerTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.MainTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.MainTest.testStart()" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getPassword(List&lt;String&gt;)" value="2.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.mediumLevelButtonClicked(ActionEvent)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testSizeOfWords()" value="3.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.testStartButtonClicked()" value="1.0"/>
+    <VALUE measured="hackme.screens.GameScreenController.wordOnClick(String)" value="3.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testGetPassword()" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.testSaveScoreboard()" value="1.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.testInitialiseGameWordVariables()" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.easyLevelButtonClicked(ActionEvent)" value="1.0"/>
+    <VALUE measured="hackme.MainTest.testMain()" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.exitButtonClicked(ActionEvent)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.testInsertIntoScoreboard()" value="1.0"/>
+    <VALUE measured="hackme.Main.main(String[])" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.initialize(URL,ResourceBundle)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.matchPassword(String,String)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testMatchPassword()" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.setUp()" value="4.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.testInitialize()" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.correctCharacters(String,String)" value="6.0"/>
+    <VALUE measured="hackme.screens.GameScreenController.initialize(URL,ResourceBundle)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordFileScanner(Difficulty)" value="6.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testCorrectChars()" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenController.saveScoreboard(ArrayList&lt;String[]&gt;,String)" value="3.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testNumberOfWords()" value="5.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.Main.gameScreenReturn(String)" value="1.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.testInitialize()" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.testGetScoreboard()" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenController.getScoreboard(String)" value="3.0"/>
+    <VALUE measured="hackme.screens.GameScreenController.initialiseGame(Difficulty)" value="1.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordList(Difficulty)" value="3.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.setupGame(Difficulty)" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenController.insertIntoScoreboard(String,int,ArrayList&lt;String[]&gt;)" value="5.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.testExitButtonClicked()" value="1.0"/>
+    <VALUE measured="hackme.MainTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.testWordOnClick()" value="1.0"/>
+    <VALUE measured="hackme.Main.startScreenReturn(String)" value="6.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.hardLevelButtonClicked(ActionEvent)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.createDisplayableWords(List&lt;String&gt;,EventHandler&lt;ActionEvent&gt;)" value="2.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.tearDown()" value="1.0"/>
+    <VALUE measured="hackme.Main.endScreenReturn(String)" value="3.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.methodMetrics.NestingDepthMetric">
+    <VALUE measured="hackme.screens.GameScreenControllerTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.MainTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.MainTest.testStart()" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getPassword(List&lt;String&gt;)" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.mediumLevelButtonClicked(ActionEvent)" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testSizeOfWords()" value="2.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.testStartButtonClicked()" value="0.0"/>
+    <VALUE measured="hackme.screens.GameScreenController.wordOnClick(String)" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testGetPassword()" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.testSaveScoreboard()" value="0.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.testInitialiseGameWordVariables()" value="0.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.easyLevelButtonClicked(ActionEvent)" value="0.0"/>
+    <VALUE measured="hackme.MainTest.testMain()" value="0.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.exitButtonClicked(ActionEvent)" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.testInsertIntoScoreboard()" value="0.0"/>
+    <VALUE measured="hackme.Main.main(String[])" value="0.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.initialize(URL,ResourceBundle)" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.matchPassword(String,String)" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testMatchPassword()" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.setUp()" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.testInitialize()" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.correctCharacters(String,String)" value="2.0"/>
+    <VALUE measured="hackme.screens.GameScreenController.initialize(URL,ResourceBundle)" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordFileScanner(Difficulty)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testCorrectChars()" value="0.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenController.saveScoreboard(ArrayList&lt;String[]&gt;,String)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest.testNumberOfWords()" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.Main.gameScreenReturn(String)" value="0.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.testInitialize()" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.testGetScoreboard()" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenController.getScoreboard(String)" value="1.0"/>
+    <VALUE measured="hackme.screens.GameScreenController.initialiseGame(Difficulty)" value="0.0"/>
+    <VALUE measured="hackme.Main.start(Stage)" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.getWordList(Difficulty)" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.setupGame(Difficulty)" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.setUp()" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenController.insertIntoScoreboard(String,int,ArrayList&lt;String[]&gt;)" value="2.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest.testExitButtonClicked()" value="0.0"/>
+    <VALUE measured="hackme.MainTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.testWordOnClick()" value="0.0"/>
+    <VALUE measured="hackme.Main.startScreenReturn(String)" value="3.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.screens.StartScreenController.hardLevelButtonClicked(ActionEvent)" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.createDisplayableWords(List&lt;String&gt;,EventHandler&lt;ActionEvent&gt;)" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest.tearDown()" value="0.0"/>
+    <VALUE measured="hackme.Main.endScreenReturn(String)" value="0.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.CommentRatioClassMetric">
+    <VALUE measured="hackme.screens.GameScreenController" value="0.19402985074626866"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest" value="0.0"/>
+    <VALUE measured="hackme.screens.EndScreenController" value="0.19718309859154928"/>
+    <VALUE measured="hackme.Main" value="0.44086021505376344"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.Difficulty" value="0.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest" value="0.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="0.024691358024691357"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest" value="0.0"/>
+    <VALUE measured="hackme.MainTest" value="0.0"/>
+    <VALUE measured="hackme.screens.StartScreenController" value="0.5813953488372093"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="0.35537190082644626"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.DepthOfInheritanceMetric">
+    <VALUE measured="hackme.screens.GameScreenController" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenController" value="1.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest" value="1.0"/>
+    <VALUE measured="hackme.MainTest" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenController" value="1.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="1.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LinesOfCodeClassMetric">
+    <VALUE measured="hackme.screens.GameScreenController" value="67.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest" value="20.0"/>
+    <VALUE measured="hackme.screens.EndScreenController" value="71.0"/>
+    <VALUE measured="hackme.Main" value="93.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.Difficulty" value="3.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest" value="20.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="81.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest" value="20.0"/>
+    <VALUE measured="hackme.MainTest" value="16.0"/>
+    <VALUE measured="hackme.screens.StartScreenController" value="43.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="121.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.classMetrics.LackOfCohesionOfMethodsClassMetric">
+    <VALUE measured="hackme.screens.GameScreenController" value="1.0"/>
+    <VALUE measured="hackme.screens.EndScreenControllerTest" value="5.0"/>
+    <VALUE measured="hackme.screens.EndScreenController" value="3.0"/>
+    <VALUE measured="hackme.Main" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine.Difficulty" value="0.0"/>
+    <VALUE measured="hackme.screens.GameScreenControllerTest" value="5.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngineTest" value="1.0"/>
+    <VALUE measured="hackme.screens.StartScreenControllerTest" value="5.0"/>
+    <VALUE measured="hackme.MainTest" value="4.0"/>
+    <VALUE measured="hackme.screens.StartScreenController" value="2.0"/>
+    <VALUE measured="hackme.gamelogic.GameEngine" value="4.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.interfaceMetrics.LinesOfCodeInterfaceMetric">
+    <VALUE measured="hackme.screens.ScreenReturner" value="3.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.AfferentCouplingMetric">
+    <VALUE measured="hackme.screens" value="3.0"/>
+    <VALUE measured="hackme" value="0.0"/>
+    <VALUE measured="hackme.gamelogic" value="6.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.EfferentCouplingMetric">
+    <VALUE measured="hackme.screens" value="3.0"/>
+    <VALUE measured="hackme" value="2.0"/>
+    <VALUE measured="hackme.gamelogic" value="2.0"/>
+  </METRIC>
+  <METRIC class_name="com.sixrr.stockmetrics.packageMetrics.InstabilityMetric">
+    <VALUE measured="hackme.screens" value="0.5"/>
+    <VALUE measured="hackme" value="1.0"/>
+    <VALUE measured="hackme.gamelogic" value="0.4"/>
+  </METRIC>
+</SNAPSHOT>

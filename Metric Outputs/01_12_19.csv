@@ -1,0 +1,26 @@
+SQA,Sun, 1 Dec 2019 20:57:47 GMT
+Method,NBD,v(G)
+"hackme.Main.main(String[])",0,1
+"hackme.Main.start(Stage)",0,1
+"hackme.gamelogic.GameEngine.getPassword(List<String>)",1,2
+"hackme.gamelogic.GameEngine.getWordFileScanner(Difficulty)",1,6
+"hackme.gamelogic.GameEngine.getWordList(Difficulty)",1,3
+"hackme.gamelogic.GameEngine.matchPassword(String,String)",0,1
+"hackme.gamelogic.GameEngineTest.setUp()",1,4
+"hackme.gamelogic.GameEngineTest.tearDown()",0,1
+"hackme.gamelogic.GameEngineTest.testGetPassword()",0,1
+"hackme.gamelogic.GameEngineTest.testMatchPassword()",0,1
+"hackme.gamelogic.GameEngineTest.testNumberOfWords()",1,5
+"hackme.gamelogic.GameEngineTest.testSizeOfWords()",2,3
+
+Class,COM_RAT,DIT,LCOM,LOC
+"hackme.Controller",0.00%,1,0,2
+"hackme.Main",0.00%,2,2,12
+"hackme.gamelogic.GameEngine",38.36%,1,3,73
+"hackme.gamelogic.GameEngine.Difficulty",0.00%,n/a,0,3
+"hackme.gamelogic.GameEngineTest",2.70%,1,1,74
+
+Package,Ca,Ce,I
+"hackme",0,0,1.00
+"hackme.gamelogic",2,2,0.67
+
