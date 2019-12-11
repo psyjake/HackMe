@@ -1,18 +1,20 @@
-package hackme;
+package hackme.gamelogic;
 
-import javafx.stage.Stage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+class RandomStringTest {
 
-    private Main main;
+    private RandomString randomString;
+    private int iLength;
+
     @BeforeEach
     void setUp() {
-        main = new Main();
+        iLength = 5;
+        randomString = new RandomString(iLength);
     }
 
     @AfterEach
@@ -20,10 +22,10 @@ class MainTest {
     }
 
     @Test
-    void testMain() {
-        try {
-            main.main(null);
-        } catch (Exception e) {
+    void testNextString() {
+        String strWord = randomString.nextString();
+
+        if(strWord.length() != iLength) {
             fail();
         }
     }
