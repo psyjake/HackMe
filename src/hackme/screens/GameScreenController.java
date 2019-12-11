@@ -1,16 +1,17 @@
 package hackme.screens;
 
 import hackme.gamelogic.GameEngine;
+import hackme.gamelogic.RandomString;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
-import java.awt.*;
 import java.net.URL;
+import java.util.*;
 import java.util.List;
-import java.util.ResourceBundle;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class GameScreenController implements Initializable {
     public ScreenReturner returner;
@@ -20,6 +21,7 @@ public class GameScreenController implements Initializable {
     private GameEngine.Difficulty difficulty;
 
     private List<String> lstWords;
+    private List<String> lstWordsObscured;
     private String strPassword;
     private int iScore;
 
@@ -44,7 +46,8 @@ public class GameScreenController implements Initializable {
         listViewWords.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
             @Override
             public void handle(javafx.scene.input.MouseEvent mouseEvent) {
-                String selectedWord = listViewWords.getSelectionModel().getSelectedItem();
+                String selectedWord = lstWords.get(
+                        listViewWords.getSelectionModel().getSelectedIndex());
                 wordOnClick(selectedWord);
             }
         });
@@ -62,7 +65,27 @@ public class GameScreenController implements Initializable {
         lstWords = gameEngine.getWordList(difficulty);
         strPassword = gameEngine.getPassword(lstWords);
 
-        listViewWords.getItems().addAll(lstWords);
+        int length = 0;
+        switch (difficulty)
+        {
+            case EASY: length = 5; break;
+            case MODERATE: length = 7; break;
+            case HARD: length = 9; break;
+        }
+
+        // Duplicate word list and add random characters
+        lstWordsObscured = new ArrayList<String>();
+
+        for (String word: lstWords) {
+            String random = new RandomString(40 - length).nextString();
+            int pos = ThreadLocalRandom.current().nextInt(0, 40 - length - length + 1);
+            String subA = random.substring(0, pos);
+            String subB = random.substring(pos, random.length() - 1);
+            String concat = subA + word + subB;
+            lstWordsObscured.add(concat);
+        }
+
+        listViewWords.getItems().addAll(lstWordsObscured);
     }
 
     /**
