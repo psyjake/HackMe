@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -11,10 +12,14 @@
             <Font name="Droid Sans Mono" size="13.0" />
          </font>
       </Label>
-      <ListView fx:id="listViewWords" layoutX="53.0" layoutY="38.0" prefHeight="246.0" prefWidth="285.0" />
+      <ListView fx:id="listViewWords" layoutX="12.0" layoutY="38.0" prefHeight="246.0" prefWidth="575.0" style="-fx-background-color: rgb(30, 30, 30);" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="38.0" />
       <Label fx:id="feedbackLabel" layoutX="53.0" layoutY="332.0" text="Number of matching characters = " textFill="#05b911">
          <font>
             <Font name="Droid Sans Mono" size="13.0" />
          </font></Label>
    </children>
+
+   <stylesheets>
+      <URL value="@../resources/styles.css" />
+   </stylesheets>
 </AnchorPane>

@@ -1,0 +1,13 @@
+.list-cell {
+    -fx-control-inner-background: rgb(30, 30, 30);
+    -fx-control-inner-background-alt: rgb(30, 30, 30);
+    -fx-font-family: "Consolas";
+    -fx-text-fill: #2effa7;
+    -fx-font-size: 30;
+}
+
+.list-cell:selected {
+    -fx-border-width: 0px;
+    -fx-border-color: rgb(30, 30, 30);
+    -fx-background: rgb(30, 30, 30);
+}
