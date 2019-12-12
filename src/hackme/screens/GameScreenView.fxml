@@ -3,20 +3,13 @@
 <?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(30, 30, 30);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackme.screens.GameScreenController">
+<AnchorPane prefHeight="580.0" prefWidth="965.0" style="-fx-background-color: rgb(30, 30, 30);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackme.screens.GameScreenController">
    <children>
-      <Label fx:id="attemptsLabel" layoutX="53.0" layoutY="14.0" text="Remaining Attempts = 4" textFill="#05b911">
-         <font>
-            <Font name="Droid Sans Mono" size="13.0" />
-         </font>
-      </Label>
-      <ListView fx:id="listViewWords" layoutX="12.0" layoutY="38.0" prefHeight="246.0" prefWidth="575.0" style="-fx-background-color: rgb(30, 30, 30);" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="38.0" />
-      <Label fx:id="feedbackLabel" layoutX="53.0" layoutY="332.0" text="Number of matching characters = " textFill="#05b911">
-         <font>
-            <Font name="Droid Sans Mono" size="13.0" />
-         </font></Label>
+      <Label fx:id="attemptsLabel" layoutX="336.0" layoutY="14.0" prefHeight="16.0" prefWidth="250.0" style="-fx-text-fill: #2effa7; -fx-font-family: Consolas; -fx-font-size: 14" text="Remaining Attempts = 4" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="feedbackLabel" layoutX="336.0" layoutY="38.0" prefWidth="250.0" style="-fx-text-fill: #2effa7; -fx-font-family: Consolas; -fx-font-size: 14" text="Number of matching characters = " AnchorPane.rightAnchor="10.0" />
+
+      <ListView fx:id="listViewWords" layoutX="12.0" layoutY="38.0" prefHeight="354.0" prefWidth="690.0" style="-fx-background-color: rgb(30, 30, 30);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
    </children>
 
    <stylesheets>

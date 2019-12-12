@@ -1,6 +1,9 @@
 package hackme.screens;
 
 import com.sun.jdi.InvalidTypeException;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,6 +11,19 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class EndScreenController {
+    public ScreenReturner returner;
+
+    @FXML
+    Label gameResultLabel;
+
+    /**
+     * Tells the screen the result of the finished game
+     * @param result Result of the game
+     */
+    public void setResult(String result) {
+        if (result.equals("lost"))
+            gameResultLabel.setText("Game Over!");
+    }
 
     /**
      * get the scoreboard as name,score pairs
@@ -86,5 +102,23 @@ public class EndScreenController {
             printStream.println(strArrPairs[0] + " " + strArrPairs[1]);
         }
         printStream.close();
+    }
+
+    /**
+     * Handle the play again button on click
+     * @param actionEvent The button click
+     * @throws Exception
+     */
+    public void playAgainButtonClicked(ActionEvent actionEvent) throws Exception {
+        returner.onScreenReturn("restart");
+    }
+
+    /**
+     * Handle the exit button on click
+     * @param actionEvent The button click
+     * @throws Exception
+     */
+    public void exitButtonClicked(ActionEvent actionEvent) throws Exception {
+        returner.onScreenReturn("exit");
     }
 }
