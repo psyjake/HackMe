@@ -6,6 +6,7 @@
 <AnchorPane prefHeight="540" prefWidth="965" style="-fx-background-color: rgb(30, 30, 30);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackme.screens.EndScreenController">
     <children>
         <Label fx:id="gameResultLabel" layoutX="235.0" layoutY="38.0" style="-fx-text-fill: #2effa7; -fx-font-family: Consolas; -fx-font-size: 100" text="Game Won!" />
+        <Label fx:id="gameScoreLabel" layoutX="318.0" layoutY="135.0" style="-fx-text-fill: #2effa7; -fx-font-family: Consolas; -fx-font-size: 50" text="Score : " />
 
         <Button fx:id="playAgainButton" layoutX="346.0" layoutY="201.0" mnemonicParsing="false" onAction="#playAgainButtonClicked" style="-fx-font-family: Consolas; -fx-font-size: 40" text="Play Again" />
 

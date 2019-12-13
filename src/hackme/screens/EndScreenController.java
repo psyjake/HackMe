@@ -16,13 +16,17 @@ public class EndScreenController {
     @FXML
     Label gameResultLabel;
 
+    @FXML
+    Label gameScoreLabel;
+
     /**
      * Tells the screen the result of the finished game
      * @param result Result of the game
      */
     public void setResult(String result) {
-        if (result.equals("lost"))
+        if (result.equals("0"))
             gameResultLabel.setText("Game Over!");
+        gameScoreLabel.setText(gameScoreLabel.getText() + result);
     }
 
     /**

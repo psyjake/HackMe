@@ -60,6 +60,7 @@ public class GameScreenController implements Initializable {
     public void initialiseGame(GameEngine.Difficulty difficulty) {
         gameEngine = new GameEngine();
         iNumOfLives = 4;
+        iScore = 1000;
 
         this.difficulty = difficulty;
         lstWords = gameEngine.getWordList(difficulty);
@@ -99,18 +100,18 @@ public class GameScreenController implements Initializable {
             feedbackLabel.setText("GAME WON");
 
             try {
-                returner.onScreenReturn("won");
+                returner.onScreenReturn(Integer.toString(iScore));
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
-            iScore -= 500;
+            iScore -= 250;
             if (--iNumOfLives < 1) {
                 feedbackLabel.setText("GAME LOST");
                 System.out.println("GAME LOST");
 
                 try {
-                    returner.onScreenReturn("lost");
+                    returner.onScreenReturn(Integer.toString(iScore));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
