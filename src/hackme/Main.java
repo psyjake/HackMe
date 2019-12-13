@@ -1,6 +1,7 @@
 package hackme;
 
 import hackme.gamelogic.GameEngine;
+import hackme.screens.EndScreenController;
 import hackme.screens.GameScreenController;
 import hackme.screens.ScreenReturner;
 import hackme.screens.StartScreenController;
@@ -10,6 +11,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Main extends Application {
     Stage window = null;
@@ -23,7 +26,14 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
         window.setTitle("HackMe Game");
+        loadStartScreen();
+        window.show();
+    }
 
+    /**
+     * Displays the start screen
+     */
+    private void loadStartScreen() throws IOException {
         // Display the start screen
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader()
                 .getResource("hackme/screens/StartScreenView.fxml"));
@@ -37,8 +47,7 @@ public class Main extends Application {
             }
         };
 
-        window.setScene(new Scene(root, 1225, 710));
-        window.show();
+        window.setScene(new Scene(root, 965, 540));
     }
 
     /**
@@ -62,7 +71,6 @@ public class Main extends Application {
 
             // Initialise game screen with selected difficulty
             GameEngine.Difficulty difficulty = GameEngine.Difficulty.HARD;
-            System.out.println("message: "+message );
             switch (message) {
                 case "easyStart": difficulty = GameEngine.Difficulty.EASY; break;
                 case "mediumStart": difficulty = GameEngine.Difficulty.MODERATE; break;
@@ -70,7 +78,7 @@ public class Main extends Application {
             }
 
             ((GameScreenController)loader.getController()).initialiseGame(difficulty);
-            window.setScene(new Scene(root, 1225, 710));
+            window.setScene(new Scene(root, 965, 540));
         } else if (message.equals("exit")) Platform.exit();
     }
 
@@ -80,19 +88,20 @@ public class Main extends Application {
      * @throws Exception
      */
     private void gameScreenReturn(String message) throws Exception {
-//        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader()
-//                .getResource("hackme/screens/EndScreenView.fxml"));
-//        Parent root = loader.load();
-//
-//        // Deal with screen returning control back
-//        ((EndScreenController)loader.getController()).returner = new ScreenReturn() {
-//            @Override
-//            public void onScreenReturn(String message) throws Exception {
-//                endScreenReturn(message);
-//            }
-//        };
-//
-//        window.setScene(new Scene(root, 1225, 710));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader()
+                .getResource("hackme/screens/EndScreenView.fxml"));
+        Parent root = loader.load();
+
+        // Deal with screen returning control back
+        ((EndScreenController)loader.getController()).returner = new ScreenReturner() {
+            @Override
+            public void onScreenReturn(String message) throws Exception {
+                endScreenReturn(message);
+            }
+        };
+
+        ((EndScreenController)loader.getController()).setResult(message);
+        window.setScene(new Scene(root, 965, 540));
     }
 
     /**
@@ -102,7 +111,7 @@ public class Main extends Application {
      */
     private void endScreenReturn(String message) throws Exception {
         if (message.equals("restart"))
-            startScreenReturn("start");
+            loadStartScreen();
         else if (message.equals(("exit")))
             Platform.exit();
     }
