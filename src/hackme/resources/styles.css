@@ -7,7 +7,11 @@
 }
 
 .list-cell:selected {
-    -fx-border-width: 0px;
     -fx-border-color: rgb(30, 30, 30);
+    -fx-background: rgb(30, 30, 30);
+}
+
+.list-cell:hover {
+    -fx-border-color: rgb(50, 50, 50);
     -fx-background: rgb(30, 30, 30);
 }

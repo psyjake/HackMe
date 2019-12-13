@@ -60,6 +60,7 @@ public class GameScreenController implements Initializable {
     public void initialiseGame(GameEngine.Difficulty difficulty) {
         gameEngine = new GameEngine();
         iNumOfLives = 4;
+        iScore = 1000;
 
         this.difficulty = difficulty;
         lstWords = gameEngine.getWordList(difficulty);
@@ -79,10 +80,10 @@ public class GameScreenController implements Initializable {
         for (String word: lstWords) {
             String random = new RandomString(40 - length).nextString();
             int pos = ThreadLocalRandom.current().nextInt(0, 40 - length - length + 1);
+
             String subA = random.substring(0, pos);
             String subB = random.substring(pos, random.length() - 1);
-            String concat = subA + word + subB;
-            lstWordsObscured.add(concat);
+            lstWordsObscured.add(subA + word + subB);
         }
 
         listViewWords.getItems().addAll(lstWordsObscured);
@@ -94,16 +95,29 @@ public class GameScreenController implements Initializable {
      */
     public void wordOnClick(String word) {
         System.out.println("Password: " + strPassword);
-        if(word.equals(strPassword)) {
-            feedbackLabel.setText("GAME WON");
+        if (word.equals(strPassword)) {
             System.out.println("GAME WON");
+            feedbackLabel.setText("GAME WON");
+
+            try {
+                returner.onScreenReturn(Integer.toString(iScore));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } else {
-            iScore -= 500;
-            if(--iNumOfLives < 1) {
+            iScore -= 250;
+            if (--iNumOfLives < 1) {
                 feedbackLabel.setText("GAME LOST");
                 System.out.println("GAME LOST");
+
+                try {
+                    returner.onScreenReturn(Integer.toString(iScore));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 return;
             }
+
             int iNumOfCorrectChars = gameEngine.correctCharacters(word, strPassword);
             System.out.println("NUMBER OF CORRECT CHARACTERS: " + iNumOfCorrectChars);
             String strFeedback = feedbackLabel.getText() + "\n" + word + ": " + iNumOfCorrectChars;
