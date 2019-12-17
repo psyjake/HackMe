@@ -19,6 +19,7 @@ class RandomStringTest {
 
     @AfterEach
     void tearDown() {
+        randomString = null;
     }
 
     @Test

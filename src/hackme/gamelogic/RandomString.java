@@ -6,6 +6,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 // Class taken from https://stackoverflow.com/questions/41107/how-to-generate-a-random-alpha-numeric-string
 // and removed unneeded code
+
+/**
+ * Generate random character strings for the GUI
+ * to make it look more like the proper game
+ */
 public class RandomString {
 
     /**
@@ -21,6 +26,9 @@ public class RandomString {
     private final char[] symbols = { '!', '\"', '£', '$', '%', '^', '&', '*', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '\'', '@', '#', '~', ',', '<', '.', '>', '/', '?', '`', '¬', '\\', '|' };
     private final char[] buf;
 
+    /**
+     * Create an alphanumeric string generator.
+     */
     public RandomString(int length, Random random) {
         if (length < 1) throw new IllegalArgumentException();
 

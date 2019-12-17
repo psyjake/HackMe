@@ -33,8 +33,6 @@ class GameEngineTest {
     @org.junit.jupiter.api.AfterEach
     void tearDown() {
         gameEngine = null;
-//        numberOfWords = 10;
-//        sizeOfWords = 5;
     }
 
     @org.junit.jupiter.api.Test

@@ -14,8 +14,14 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.util.*;
 
+/**
+ * The utility functions of the game
+ */
 public class GameEngine {
 
+    /**
+     * The difficulty of the game
+     */
     public enum Difficulty {
         EASY, MODERATE, HARD
     }

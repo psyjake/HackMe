@@ -13,6 +13,9 @@ import java.util.*;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Controller for the game screen
+ */
 public class GameScreenController implements Initializable {
     public ScreenReturner returner;
 

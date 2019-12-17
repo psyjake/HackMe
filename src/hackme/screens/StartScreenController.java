@@ -6,18 +6,11 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class StartScreenController implements Initializable {
+/**
+ * Controller for the start screen
+ */
+public class StartScreenController{
     public ScreenReturner returner = null;
-
-    /**
-     * Initialise the controller
-     * @param location
-     * @param resources
-     */
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
 
     /**
      * Handle the easy level start button on click

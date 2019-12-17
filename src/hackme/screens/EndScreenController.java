@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/**
+ * Controller for the end screen
+ */
 public class EndScreenController {
     public ScreenReturner returner;
 

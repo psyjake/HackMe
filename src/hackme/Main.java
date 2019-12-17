@@ -14,6 +14,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Start the application and handle the creation and
+ * display of all scenes and of all returner
+ * implementations for each controller
+ */
 public class Main extends Application {
     Stage window = null;
 
@@ -118,7 +123,7 @@ public class Main extends Application {
 
 
     /**
-     *
+     * launch the application
      * @param args
      */
     public static void main(String[] args) {
